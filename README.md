@@ -14,4 +14,4 @@
 - Add player animation (idle walk run)
 
 ## what we plan to do next
-- [] Make the game able to handle more states (Expected in fully MOBA featured)
+- [ ] Make the game able to handle more states (Expected in fully MOBA featured)
