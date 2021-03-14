@@ -8,7 +8,7 @@
 - Ploypailin Pitisuwannarat <613040154-6> 
 
 ## what have we done
-- :heavy_check_mark: Make different scene with different background music
+- [:heavy_check_mark:] Make different scene with different background music
 - :heavy_check_mark: Make online system so the game can have more than one player in a scene
 - :heavy_check_mark: Make character controller using joystick
 - :heavy_check_mark: Add player animation (idle walk run)
