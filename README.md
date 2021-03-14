@@ -13,5 +13,15 @@
 - [x] Make character controller using joystick
 - [x] Add player animation (idle walk run)
 
+- [ ] Mercury
+- [x] Venus
+- [x] Earth (Orbit/Moon)
+- [x] Mars
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
+
 ## what we plan to do next
 - [ ] Make the game able to handle more states (Expected in fully MOBA featured)
