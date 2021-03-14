@@ -6,6 +6,7 @@ project for mobile dev game
 ### Ploypailin Pitisuwannarat <613040154-6>
 
 ****************************************************
+# what have we done
 website <https://meangpu.github.io/study/unity-EN843305-2020/>  
 # **ajKanda**  
 ## **slide 1**  
