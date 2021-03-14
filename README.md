@@ -8,10 +8,10 @@
 - Ploypailin Pitisuwannarat <613040154-6> 
 
 ## what have we done
-- Make different scene with different background music
-- Make online system so the game can have more than one player in a scene
-- Make character controller using joystick
-- Add player animation (idle walk run)
+- [*] Make different scene with different background music
+- [*] Make online system so the game can have more than one player in a scene
+- [*] Make character controller using joystick
+- [*] Add player animation (idle walk run)
 
 ## what we plan to do next
 - [ ] Make the game able to handle more states (Expected in fully MOBA featured)
