@@ -1,6 +1,6 @@
 # DMEmoba
 
-  This is Multiplyaer Online Battle arena game made by Unity with Colyseus as backend server called DME-MOBA (Digital Media Engineering MOBA GAME)
+  This is Multiplyaer Online Battle Arena game made by Unity with Colyseus as backend server called DME-MOBA (Digital Media Engineering MOBA GAME)
 ****************************************************
 ## Group Members
 - Nattapong Tangsatheanrapap <613040128-7>  
@@ -14,3 +14,4 @@
 - Add player animation (idle walk run)
 
 ## what we plan to do next
+[] Make the game able to handle more states (Expected in fully MOBA featured)
