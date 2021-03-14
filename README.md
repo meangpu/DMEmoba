@@ -7,4 +7,7 @@ project for mobile dev game
 
 ****************************************************
 ## what have we done
-- make different scene with different background music
+- Make different scene with different background music
+- Make online system so that there can be more than one player in scene
+- Make character controller using joystick
+- Add player animation (idle walk run)
