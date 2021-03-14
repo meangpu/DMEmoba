@@ -3,9 +3,9 @@
   This is Multiplyaer Online Battle Arena game made by Unity with Colyseus as backend server called DME-MOBA (Digital Media Engineering MOBA GAME)
 ****************************************************
 ## Group Members
-- Nattapong Tangsatheanrapap <613040128-7>  
-- Roongpetch Kunthakuldusadee <613040651-2> 
-- Ploypailin Pitisuwannarat <613040154-6> 
+- Nattapong Tangsatheanrapap <613040128-7> (work on game script) 
+- Roongpetch Kunthakuldusadee <613040651-2> (work on online part) 
+- Ploypailin Pitisuwannarat <613040154-6> (work on level/character/UI design) 
 
 ## what have we done
 | Tasks                                                                   | Status             |
