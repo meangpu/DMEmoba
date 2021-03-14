@@ -6,5 +6,5 @@ project for mobile dev game
 ### Ploypailin Pitisuwannarat <613040154-6>
 
 ****************************************************
-# what have we done
+## what have we done
 - make different scene with different background music
