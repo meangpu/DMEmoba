@@ -7,6 +7,7 @@ public class cameraController : MonoBehaviour
     public float movementSpeed;
     public float movementTime;
     public Transform followTransform;
+    public Vector3 offset;
 
     public Vector3 newPosition;
 
@@ -24,7 +25,7 @@ public class cameraController : MonoBehaviour
 
     void Start() 
     {
-        newPosition = transform.position;
+        newPosition = transform.position + offset;
     }
 
     void Update()
@@ -45,7 +46,7 @@ public class cameraController : MonoBehaviour
         }
         else
         {
-            transform.position = followTransform.position;
+            transform.position = followTransform.position + offset;
             newPosition = transform.position;
         }
         

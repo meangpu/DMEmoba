@@ -1685,6 +1685,38 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 366305387}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: startButton2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548593948024642943, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6548593948170298501, guid: 4f97ea1c7fbd3c74ba198711359c0320, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.4999995

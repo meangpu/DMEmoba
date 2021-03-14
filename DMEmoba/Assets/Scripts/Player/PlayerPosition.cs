@@ -43,10 +43,10 @@ public class PlayerPosition : MonoBehaviour
         pos.y = _pos.y;
         pos.z = _pos.z;
         Quat rot = new Quat();
-        rot.x = 0;
-        rot.y = 0;
-        rot.z = 0;
-        rot.w = 1;
+        rot.x = _rot.x;
+        rot.y = _rot.y;
+        rot.z = _rot.z;
+        rot.w = _rot.w;
         msg.position = pos;
         msg.rotation = rot;
         network.room.Send("input", msg);

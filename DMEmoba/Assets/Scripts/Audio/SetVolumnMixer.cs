@@ -20,6 +20,6 @@ public class SetVolumnMixer : MonoBehaviour
     public void SetSoundEffectLevel(float sliderValue)
     {
         mixer.SetFloat("soundEffect", Mathf.Log10(sliderValue) * 20);
-        FindObjectOfType<AudioManager>().Play("startButton2");
+        // FindObjectOfType<AudioManager>().Play("startButton2");
     }
 }
