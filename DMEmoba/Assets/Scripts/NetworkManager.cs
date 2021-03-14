@@ -82,12 +82,16 @@ public class NetworkManager : MonoBehaviour
                 if (obj.Field == "position")
                 {
                     Vect3 pos = (Vect3)obj.Value;
-                    print("Player " + key + "moved at " + pos.x + ", " + pos.y + ", " + pos.z);
+                    //print("Player " + key + "moved at " + pos.x + ", " + pos.y + ", " + pos.z);
                     objRef.transform.position = new Vector3(pos.x, pos.y, pos.z);
+                } else if (obj.Field == "rotation")
+                {
+                    Quat rot = (Quat)obj.Value;
+                    print("Player " + key + "look at " + rot.x + ", " + rot.y + ", " + rot.z + ", " + rot.w);
+                    objRef.transform.rotation = new Quaternion(rot.x, rot.y, rot.z, rot.w);
                 }
+                
             });
         }
     }
-
-  
 }

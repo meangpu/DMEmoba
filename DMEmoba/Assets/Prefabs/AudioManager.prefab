@@ -58,3 +58,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: startButton3
+    clip: {fileID: 8300000, guid: 2e9047fdfb6654e4fa70f99654b778f9, type: 3}
+    audioMixer: {fileID: -4309579062261020995, guid: 291af797a5d5c814889c3bf62b18658e, type: 2}
+    volumn: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: startButton4
+    clip: {fileID: 8300000, guid: b79be946146ab63499f9fa3a36e9398d, type: 3}
+    audioMixer: {fileID: -4309579062261020995, guid: 291af797a5d5c814889c3bf62b18658e, type: 2}
+    volumn: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: playerGetHit
+    clip: {fileID: 8300000, guid: d60959291917ac24aa97b4237df359db, type: 3}
+    audioMixer: {fileID: -4309579062261020995, guid: 291af797a5d5c814889c3bf62b18658e, type: 2}
+    volumn: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

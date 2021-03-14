@@ -12,17 +12,17 @@ public class AudioManager : MonoBehaviour
     void Awake() 
     {
 
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        // if (instance == null)
+        // {
+        //     instance = this;
+        // }
+        // else
+        // {
+        //     Destroy(gameObject);
+        //     return;
+        // }
 
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
 
         foreach (Sound s in sounds)
         {

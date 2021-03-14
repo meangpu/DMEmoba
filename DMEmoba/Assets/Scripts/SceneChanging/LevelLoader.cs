@@ -14,7 +14,7 @@ public class LevelLoader : MonoBehaviour
 
     public void GotoScene()
     {
-        FindObjectOfType<AudioManager>().Play("startButton2");
+        // FindObjectOfType<AudioManager>().Play("startButton2");
         StartCoroutine(LoadLevel(sceneIndex));
     }
 
