@@ -7,4 +7,4 @@ project for mobile dev game
 
 ****************************************************
 # what have we done
-
+- make different scene with different background music
