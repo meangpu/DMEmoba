@@ -7,7 +7,7 @@
 - Roongpetch Kunthakuldusadee <613040651-2> :electric_plug: | :computer: (work on Backend server and Unity Frontend API) 
 - Ploypailin Pitisuwannarat <613040154-6> :art: | :globe_with_meridians: (work on level/character/UI design) 
 
-## what have we done
+## what we have done
 | Tasks                                                                   | Status             |
 | ----------------------------------------------------------------------- | ------------------ |
 | Make different scene with different background music                    | :white_check_mark: |
