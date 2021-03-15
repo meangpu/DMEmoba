@@ -12,7 +12,7 @@
   <p align="center">
     An awesome MOBA game made by DME guys
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/meangpu/DMEmoba"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="http://dmemoba.ivrylobs.xyz/">View Demo</a>
@@ -22,7 +22,8 @@
     <a href="https://github.com/meangpu/DMEmoba/issues">Request Feature</a>
   </p>
 </p>
-# DMEmoba
+
+### DMEmoba
 
   This is Multiplyaer Online Battle Arena game made by Unity with Colyseus as backend server called DME-MOBA (Digital Media Engineering MOBA GAME) Official: http://dmemoba.ivrylobs.xyz/
 ****************************************************
