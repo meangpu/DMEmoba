@@ -5,7 +5,7 @@
 ## Group Members
 - Nattapong Tangsatheanrapap <613040128-7> (work on game mechanics and scripts) 
 - Roongpetch Kunthakuldusadee <613040651-2> (work on Backend server and Unity Frontend API) 
-- Ploypailin Pitisuwannarat <613040154-6> (work on level/character/UI design) 
+- Ploypailin Pitisuwannarat <613040154-6> (work on level/character/UI design) :art: | :globe_with_meridians:
 
 ## what have we done
 | Tasks                                                                   | Status             |
