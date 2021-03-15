@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="http://dmemoba.ivrylobs.xyz/">
-    <img src="https://gaming4.cash/wp-content/uploads/2018/08/he-Rise%E2%80%A6-and-Fall-Of-MOBAs-1200x675.png" alt="Logo" width="80" height="80">
+    <img src="https://gaming4.cash/wp-content/uploads/2018/08/he-Rise%E2%80%A6-and-Fall-Of-MOBAs-1200x675.png" alt="Logo" height="200">
   </a>
 
   <h3 align="center">DME MOBA</h3>
