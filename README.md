@@ -3,14 +3,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgaming4.cash%2Fthe-rise-and-fall-of-the-moba-genre&psig=AOvVaw2ONiILEDMudA0-6k2BLZQE&ust=1615863555950000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDt7P2mse8CFQAAAAAdAAAAABAD">
+  <a href="https://gaming4.cash/wp-content/uploads/2018/08/he-Rise%E2%80%A6-and-Fall-Of-MOBAs-1200x675.png">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">DME MOBA</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    An awesome MOBA game made by DME guys
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
