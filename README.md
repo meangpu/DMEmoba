@@ -18,3 +18,8 @@
 
 ## what we plan to do next
 - [ ] Make the game able to handle more states (Expected in fully MOBA featured)
+- [ ] Make the game have capability to take the damage of attack interaction for both allies and enemies
+- [ ] Add more skills and abilities to the players called Champion or Heros
+- [ ] Add the shop for upgrade the status and ability of the players
+- [ ] Make the game able to do auto-attack for players which most MOBA game should have
+- [ ] Improve the game to have more smooth gameplay and lower latancy between clients and server
