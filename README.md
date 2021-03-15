@@ -32,6 +32,15 @@
 - Roongpetch Kunthakuldusadee <613040651-2> :electric_plug: | :computer: (work on Backend server and Unity Frontend API) 
 - Ploypailin Pitisuwannarat <613040154-6> :art: | :globe_with_meridians: (work on level/character/UI design) 
 
+## Built With
+
+This game have made up with Unity game engine and C# language for making game script the first objective of this game to have multiplayer so we also use multiplayer game server framework called Colyseus that use node.js as runtime and using WebSocket for stream game data and states and now we have deploy the development version on AWS Lightsail which is lightweight and fast
+
+* [Unity](https://unity.com/)
+* [Colyseus](https://www.colyseus.io/)
+* [AWS](https://aws.amazon.com/m)
+
+
 ## what we have done
 | Tasks                                                                   | Status             |
 | ----------------------------------------------------------------------- | ------------------ |
@@ -39,7 +48,7 @@
 | Make online system so the game can have more than one player in a scene | :white_check_mark: |
 | Make character controller using joystick                                | :white_check_mark: |
 | Add player animation (idle walk run)                                    | :white_check_mark: |
-| Display heath for each player                                           | :white_check_mark: |
+| Display health for each player                                           | :white_check_mark: |
 
 ## what we plan to do next
 - [ ] Make the game able to handle more states (Expected in fully MOBA featured)
