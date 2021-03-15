@@ -3,8 +3,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://gaming4.cash/wp-content/uploads/2018/08/he-Rise%E2%80%A6-and-Fall-Of-MOBAs-1200x675.png">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="http://dmemoba.ivrylobs.xyz/">
+    <img src="https://gaming4.cash/wp-content/uploads/2018/08/he-Rise%E2%80%A6-and-Fall-Of-MOBAs-1200x675.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">DME MOBA</h3>
@@ -15,11 +15,11 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="http://dmemoba.ivrylobs.xyz/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/meangpu/DMEmoba/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/meangpu/DMEmoba/issues">Request Feature</a>
   </p>
 </p>
 # DMEmoba
