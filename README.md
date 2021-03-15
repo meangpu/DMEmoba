@@ -1,3 +1,10 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # DMEmoba
 
   This is Multiplyaer Online Battle Arena game made by Unity with Colyseus as backend server called DME-MOBA (Digital Media Engineering MOBA GAME) Official: http://dmemoba.ivrylobs.xyz/
