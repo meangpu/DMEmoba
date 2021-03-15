@@ -33,10 +33,10 @@
     <li>
       <a href="#dmemoba">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#group-members">Members</a></li>
       </ul>
       <ul>
-        <li><a href="#group-members">Members</a></li>
+        <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li><a href="#what-we-have-done">Tasks</a></li>
