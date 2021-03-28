@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     private bool groundedPlayer;
     [SerializeField]
     private float playerSpeed = 2.0f;
-    [SerializeField]
-    private float jumpHeight = 1.0f;
+    // [SerializeField]
+    // private float jumpHeight = 1.0f;
     [SerializeField]
     private float gravityValue = -9.81f;
     public Animator anim = null;
@@ -54,9 +54,11 @@ public class PlayerController : MonoBehaviour
         }
 
         // Changes the height position of the player..
-        if (playerInput.Playermain.Attack.triggered && groundedPlayer)
+        if (playerInput.Playermain.Attack.triggered)
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            anim.SetTrigger("attack");
+
+            // playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
