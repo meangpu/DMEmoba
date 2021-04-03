@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347935256351",
+    "project_id": "dmemoba",
+    "storage_bucket": "dmemoba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347935256351:android:da4d00d742cd20db910a2a",
+        "android_client_info": {
+          "package_name": "com.dme.DMEMoba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347935256351-a1efoojnsl8mn52q17cn7el5nlv3bkdm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwCdgZ6Ll8FngdUMt-ykI-m6PQ2YPIFsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347935256351-a1efoojnsl8mn52q17cn7el5nlv3bkdm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
