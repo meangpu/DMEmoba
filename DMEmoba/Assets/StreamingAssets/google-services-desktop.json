@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "347935256351",
+    "firebase_url": "https://dmemoba-default-rtdb.firebaseio.com",
     "project_id": "dmemoba",
     "storage_bucket": "dmemoba.appspot.com"
   },
