@@ -1,3 +1,4 @@
 bg1 = [브금대통령] (밝은경쾌Bright) 소라게의 모험The Adventure of a Hermit Crab [무료음악브금Royalty Free Music]
 bg2 = Camille Saint-Saëns The Elephant
 bg3 = [브금대통령] (황당실수Comic) 조별과제Group Project [무료음악브금Royalty Free Music]
+bg4 = Wii Theme [Slowed + Reverb + Rain]
