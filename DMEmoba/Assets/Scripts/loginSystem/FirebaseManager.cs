@@ -379,6 +379,7 @@ public class FirebaseManager : MonoBehaviour
         }
         else
         {
+            print("wowwwww");
             //Data has been retrieved
             DataSnapshot snapshot = DBTask.Result;
 
