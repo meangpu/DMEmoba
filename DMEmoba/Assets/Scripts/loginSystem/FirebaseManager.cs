@@ -369,6 +369,7 @@ public class FirebaseManager : MonoBehaviour
     {
         //Get all the users data ordered by kills amount
         var DBTask = DBreference.Child("users").OrderByChild("kills").GetValueAsync();
+        print("wee");
 
         yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
 
@@ -401,6 +402,7 @@ public class FirebaseManager : MonoBehaviour
             }
 
             //Go to scoareboard screen
+            
             UIManager.instance.ScoreboardScreen();
         }
     }
