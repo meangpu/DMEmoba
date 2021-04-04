@@ -1579,6 +1579,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 338193774}
+    - target: {fileID: 2244681517950175969, guid: df14ebce5396a844496162d2820dc583, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200938498175286253, guid: df14ebce5396a844496162d2820dc583, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5513375629671674500, guid: df14ebce5396a844496162d2820dc583, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1686,6 +1694,18 @@ PrefabInstance:
     - target: {fileID: 5513375630554754061, guid: df14ebce5396a844496162d2820dc583, type: 3}
       propertyPath: m_Name
       value: mainUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513375630554754063, guid: df14ebce5396a844496162d2820dc583, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513375630554754063, guid: df14ebce5396a844496162d2820dc583, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513375630554754063, guid: df14ebce5396a844496162d2820dc583, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 5513375630727814289, guid: df14ebce5396a844496162d2820dc583, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

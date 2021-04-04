@@ -369,7 +369,6 @@ public class FirebaseManager : MonoBehaviour
     {
         //Get all the users data ordered by kills amount
         var DBTask = DBreference.Child("users").OrderByChild("kills").GetValueAsync();
-        print("wee");
 
         yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
 
@@ -379,7 +378,6 @@ public class FirebaseManager : MonoBehaviour
         }
         else
         {
-            print("wowwwww");
             //Data has been retrieved
             DataSnapshot snapshot = DBTask.Result;
 
