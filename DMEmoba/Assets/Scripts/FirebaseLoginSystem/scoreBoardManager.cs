@@ -139,6 +139,24 @@ public class scoreBoardManager : MonoBehaviour
     [ContextMenu("aaaaaaaaaa")]
     private void showDataaa()
     {
-        Debug.Log(User);
+        Debug.Log(FirebaseManager.User.DisplayName);
+        FirebaseDatabase.DefaultInstance
+            .GetReference("users")
+            .GetValueAsync().ContinueWith(task => {
+                if (task.IsFaulted) {
+                    // Handle the error...
+                    Debug.Log("Failed to load Users Data");
+                }
+                else if (task.IsCompleted) {
+                    DataSnapshot snapshot = task.Result;
+                    // Do something with snapshot...
+
+                    foreach (DataSnapshot child in snapshot.Children ) {
+                        IDictionary dictUsers = (IDictionary)child.Value;   
+                        Debug.Log(dictUsers["username"]);  
+                    }
+                }
+            });
+        
     }
 }

@@ -12,8 +12,8 @@ public class FirebaseManager : MonoBehaviour
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
     public FirebaseAuth auth;    
-    public FirebaseUser User;
-    public DatabaseReference DBreference;
+    public static FirebaseUser User;
+    public static DatabaseReference DBreference;
 
     //Login variables
     [Header("Login")]
@@ -153,6 +153,7 @@ public class FirebaseManager : MonoBehaviour
             //User is now logged in
             //Now get the result
             User = LoginTask.Result;
+         
             Debug.LogFormat("User signed in successfully: {0} ({1})", User.DisplayName, User.Email);
             warningLoginText.text = "";
             confirmLoginText.text = "Logged In";
