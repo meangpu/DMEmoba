@@ -20,6 +20,12 @@ public class scoreBoardManager : MonoBehaviour
     public GameObject scoreElement;
     public Transform scoreboardContent;
 
+    [Header("TextField")]
+    public TMP_Text username;
+    public TMP_Text userid;
+
+
+
     void Awake()
     {
         //Check that all of the necessary dependencies for Firebase are present on the system
@@ -38,12 +44,19 @@ public class scoreBoardManager : MonoBehaviour
         });
     }
 
+    public void showUserData()
+    {
+        StartCoroutine(LoadUserData());
+        Debug.Log("userData");
+    }
+
     private void InitializeFirebase()
     {
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
         DBreference = FirebaseDatabase.DefaultInstance.RootReference;
+        Debug.Log($"auth {auth} db{DBreference}");
     }
 
     public void ScoreboardButton()
@@ -92,6 +105,40 @@ public class scoreBoardManager : MonoBehaviour
         }
     }
 
+    private IEnumerator LoadUserData()
+    {
+        //Get the currently logged in user data
+        var DBTask = DBreference.Child("users").Child(User.UserId).GetValueAsync();
 
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
 
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+        else if (DBTask.Result.Value == null)
+        {
+            //No data exists yet
+            Debug.Log("Player have no data yet");
+            // xpField.text = "0";
+            // killsField.text = "0";
+            // deathsField.text = "0";
+        }
+        else
+        {
+            //Data has been retrieved
+            DataSnapshot snapshot = DBTask.Result;
+            username.text = snapshot.Child("username").Value.ToString();
+            Debug.Log(snapshot);
+            // xpField.text = snapshot.Child("xp").Value.ToString();
+            // killsField.text = snapshot.Child("kills").Value.ToString();
+            // deathsField.text = snapshot.Child("deaths").Value.ToString();
+        }
+    }
+
+    [ContextMenu("aaaaaaaaaa")]
+    private void showDataaa()
+    {
+        Debug.Log(User);
+    }
 }

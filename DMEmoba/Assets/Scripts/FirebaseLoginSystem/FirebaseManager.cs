@@ -248,6 +248,25 @@ public class FirebaseManager : MonoBehaviour
         }
     }
 
+    public void GuestLogin()
+    {
+        auth.SignInAnonymouslyAsync().ContinueWith(task => {
+        if (task.IsCanceled) {
+            Debug.LogError("SignInAnonymouslyAsync was canceled.");
+            return;
+        }
+        if (task.IsFaulted) {
+            Debug.LogError("SignInAnonymouslyAsync encountered an error: " + task.Exception);
+            return;
+        }
+
+        Firebase.Auth.FirebaseUser newUser = task.Result;
+        Debug.LogFormat("User signed in successfully: {0} ({1})",
+            newUser.DisplayName, newUser.UserId);
+        });
+
+    }
+
     private IEnumerator UpdateUsernameAuth(string _username)
     {
         //Create a user profile and set the username
@@ -405,4 +424,12 @@ public class FirebaseManager : MonoBehaviour
             UIManager.instance.ScoreboardScreen();
         }
     }
+
+    
+    [ContextMenu("aaaaaaaaaa")]
+    private void showDataaa()
+    {
+        Debug.Log(User);
+    }
+
 }
