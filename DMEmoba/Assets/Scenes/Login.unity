@@ -1385,6 +1385,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227141190}
   m_CullTransparentMesh: 0
+--- !u!114 &238092792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2403173643830380200, guid: c781c170f9263b644b5da85bf903e533, type: 3}
+  m_PrefabInstance: {fileID: 1346025638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd306d529c47c2e4bbcdb9e154c9230b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &262150689
 GameObject:
   m_ObjectHideFlags: 0
@@ -7692,6 +7703,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 687490506}
     m_Modifications:
+    - target: {fileID: 2403173643830380200, guid: c781c170f9263b644b5da85bf903e533, type: 3}
+      propertyPath: sceneIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2403173643830380201, guid: c781c170f9263b644b5da85bf903e533, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8915,6 +8930,30 @@ MonoBehaviour:
           m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 143520013}
+        m_TargetAssemblyTypeName: FirebaseManager, Assembly-CSharp
+        m_MethodName: GuestLogin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 238092792}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: GotoScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1615922565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8935,7 +8974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7d30a7673c95044c5ba541d8597d4f60, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
