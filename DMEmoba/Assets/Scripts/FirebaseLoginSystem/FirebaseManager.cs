@@ -425,4 +425,11 @@ public class FirebaseManager : MonoBehaviour
         }
     }
 
+    
+    [ContextMenu("aaaaaaaaaa")]
+    private void showDataaa()
+    {
+        Debug.Log(User);
+    }
+
 }

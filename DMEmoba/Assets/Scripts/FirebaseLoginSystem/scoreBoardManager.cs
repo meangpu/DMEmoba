@@ -136,4 +136,9 @@ public class scoreBoardManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("aaaaaaaaaa")]
+    private void showDataaa()
+    {
+        Debug.Log(User);
+    }
 }
