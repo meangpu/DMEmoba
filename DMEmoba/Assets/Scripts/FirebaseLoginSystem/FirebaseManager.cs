@@ -379,9 +379,9 @@ public class FirebaseManager : MonoBehaviour
             //Data has been retrieved
             DataSnapshot snapshot = DBTask.Result;
 
-            xpField.text = snapshot.Child("xp").Value.ToString();
-            killsField.text = snapshot.Child("kills").Value.ToString();
-            deathsField.text = snapshot.Child("deaths").Value.ToString();
+            xpField.text = string.Format("{0:n}", snapshot.Child("xp").Value.ToString());
+            killsField.text = string.Format("{0:n}",snapshot.Child("kills").Value.ToString());
+            deathsField.text = string.Format("{0:n}",snapshot.Child("deaths").Value.ToString());
         }
     }
 
