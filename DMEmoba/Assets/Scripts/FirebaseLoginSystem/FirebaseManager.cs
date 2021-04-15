@@ -399,9 +399,15 @@ public class FirebaseManager : MonoBehaviour
             // killsField.text = string.Format("{0:n}",snapshot.Child("kills").Value.ToString());
             // deathsField.text = string.Format("{0:n}",snapshot.Child("deaths").Value.ToString());
 
-            xpMeangpu.text = string.Format("{0:n}", snapshot.Child("xp").Value.ToString());
-            killMeangpu.text = string.Format("{0:n}",snapshot.Child("kills").Value.ToString());
-            deathMeangpu.text = string.Format("{0:n}",snapshot.Child("deaths").Value.ToString());
+            int nowXp = int.Parse(snapshot.Child("xp").Value.ToString());
+            int nowKill = int.Parse(snapshot.Child("kills").Value.ToString());
+            int nowDeath = int.Parse(snapshot.Child("deaths").Value.ToString());
+
+            xpMeangpu.text = nowXp.ToString("n0");
+            killMeangpu.text = nowKill.ToString("n0");
+            deathMeangpu.text = nowDeath.ToString("n0");
+            
+            
         }
     }
 
