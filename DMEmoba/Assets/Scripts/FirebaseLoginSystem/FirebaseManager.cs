@@ -229,6 +229,12 @@ public class FirebaseManager : MonoBehaviour
                 //User has now been created
                 //Now get the result
                 User = RegisterTask.Result;
+                StartCoroutine(UpdateUsernameAuth(_username));
+                StartCoroutine(UpdateUsernameDatabase(_username));
+
+                StartCoroutine(UpdateXp(0));
+                StartCoroutine(UpdateKills(0));
+                StartCoroutine(UpdateDeaths(0));
 
                 if (User != null)
                 {
@@ -436,6 +442,7 @@ public class FirebaseManager : MonoBehaviour
             //Loop through every users UID
             foreach (DataSnapshot childSnapshot in snapshot.Children.Reverse<DataSnapshot>())
             {
+                Debug.Log(childSnapshot);
                 string username = childSnapshot.Child("username").Value.ToString();
                 int kills = int.Parse(childSnapshot.Child("kills").Value.ToString());
                 int deaths = int.Parse(childSnapshot.Child("deaths").Value.ToString());
