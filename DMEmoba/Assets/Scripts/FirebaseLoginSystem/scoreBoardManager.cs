@@ -157,6 +157,5 @@ public class scoreBoardManager : MonoBehaviour
                     }
                 }
             });
-        
     }
 }
