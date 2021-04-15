@@ -9,6 +9,8 @@ using System.Linq;
 public class scoreBoardManager : MonoBehaviour
 {
 
+
+    public PlayerName playerName;
     //Firebase variables
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
@@ -24,10 +26,9 @@ public class scoreBoardManager : MonoBehaviour
     public TMP_Text username;
     public TMP_Text userid;
 
-
-
     void Awake()
     {
+        playerName = GameObject.Find("Player").GetComponent<PlayerName>();
         //Check that all of the necessary dependencies for Firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
@@ -42,6 +43,8 @@ public class scoreBoardManager : MonoBehaviour
                 Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
             }
         });
+
+        playerName.ChangeName(FirebaseManager.User.DisplayName);
     }
 
     public void showUserData()
@@ -140,6 +143,8 @@ public class scoreBoardManager : MonoBehaviour
     private void showDataaa()
     {
         Debug.Log(FirebaseManager.User.DisplayName);
+        playerName.ChangeName(FirebaseManager.User.DisplayName);
+
         FirebaseDatabase.DefaultInstance
             .GetReference("users")
             .GetValueAsync().ContinueWith(task => {

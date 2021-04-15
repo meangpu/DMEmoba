@@ -13,9 +13,9 @@ public class ScoreElement : MonoBehaviour
     public void NewScoreElement (string _username, int _kills, int _deaths, int _xp)
     {
         usernameText.text = _username;
-        killsText.text = _kills.ToString();
-        deathsText.text = _deaths.ToString();
-        xpText.text = _xp.ToString();
+        killsText.text = _kills.ToString("n0");
+        deathsText.text = _deaths.ToString("n0");
+        xpText.text = _xp.ToString("n0");
     }
 
 }

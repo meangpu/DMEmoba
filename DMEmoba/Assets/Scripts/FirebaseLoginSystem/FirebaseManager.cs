@@ -32,10 +32,16 @@ public class FirebaseManager : MonoBehaviour
 
     //User Data variables
     [Header("UserData")]
+    public TMP_Text userNameMeangpu;
+    public TMP_Text xpMeangpu;
+    public TMP_Text killMeangpu;
+    public TMP_Text deathMeangpu;
+
     public TMP_InputField usernameField;
     public TMP_InputField xpField;
     public TMP_InputField killsField;
     public TMP_InputField deathsField;
+
     public GameObject scoreElement;
     public Transform scoreboardContent;
 
@@ -102,10 +108,12 @@ public class FirebaseManager : MonoBehaviour
     {
         StartCoroutine(UpdateUsernameAuth(usernameField.text));
         StartCoroutine(UpdateUsernameDatabase(usernameField.text));
+        userNameMeangpu.text = usernameField.text;
 
-        StartCoroutine(UpdateXp(int.Parse(xpField.text)));
-        StartCoroutine(UpdateKills(int.Parse(killsField.text)));
-        StartCoroutine(UpdateDeaths(int.Parse(deathsField.text)));
+        // StartCoroutine(UpdateXp(int.Parse(xpField.text)));
+        // StartCoroutine(UpdateKills(int.Parse(killsField.text)));
+        // StartCoroutine(UpdateDeaths(int.Parse(deathsField.text)));
+
     }
     //Function for the scoreboard button
     public void ScoreboardButton()
@@ -162,6 +170,9 @@ public class FirebaseManager : MonoBehaviour
             yield return new WaitForSeconds(2);
 
             usernameField.text = User.DisplayName;
+
+            userNameMeangpu.text = User.DisplayName;
+
             UIManager.instance.UserDataScreen(); // Change to user data UI
             confirmLoginText.text = "";
             ClearLoginFeilds();
@@ -373,15 +384,30 @@ public class FirebaseManager : MonoBehaviour
             xpField.text = "0";
             killsField.text = "0";
             deathsField.text = "0";
+
+            xpMeangpu.text = "No data yet!";
+            killMeangpu.text = "No data yet!";
+            deathMeangpu.text = "No data yet!";
+
         }
         else
         {
             //Data has been retrieved
             DataSnapshot snapshot = DBTask.Result;
 
-            xpField.text = snapshot.Child("xp").Value.ToString();
-            killsField.text = snapshot.Child("kills").Value.ToString();
-            deathsField.text = snapshot.Child("deaths").Value.ToString();
+            // xpField.text = string.Format("{0:n}", snapshot.Child("xp").Value.ToString());
+            // killsField.text = string.Format("{0:n}",snapshot.Child("kills").Value.ToString());
+            // deathsField.text = string.Format("{0:n}",snapshot.Child("deaths").Value.ToString());
+
+            int nowXp = int.Parse(snapshot.Child("xp").Value.ToString());
+            int nowKill = int.Parse(snapshot.Child("kills").Value.ToString());
+            int nowDeath = int.Parse(snapshot.Child("deaths").Value.ToString());
+
+            xpMeangpu.text = nowXp.ToString("n0");
+            killMeangpu.text = nowKill.ToString("n0");
+            deathMeangpu.text = nowDeath.ToString("n0");
+            
+            
         }
     }
 
