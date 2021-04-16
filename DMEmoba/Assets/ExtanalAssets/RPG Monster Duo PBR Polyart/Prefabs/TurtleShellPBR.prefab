@@ -781,6 +781,7 @@ GameObject:
   - component: {fileID: 95237074988894122}
   - component: {fileID: 7930304886099553734}
   - component: {fileID: 2106560233828579098}
+  - component: {fileID: 3253579322868170806}
   m_Layer: 0
   m_Name: TurtleShellPBR
   m_TagString: Untagged
@@ -852,6 +853,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3253579322868170806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774625739149480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e4fb905a74e3543bc91aa2082bc010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePopUp: {fileID: 1031265942800693269, guid: f0376d4d42f13e442a437f6fd4231fc2, type: 3}
 --- !u!1 &1822049695589022
 GameObject:
   m_ObjectHideFlags: 0
