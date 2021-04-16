@@ -91,3 +91,8 @@ This game have made up with Unity game engine and C# language for making game sc
 [stars-url]: https://github.com/meangpu/DMEmoba/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/meangpu/DMEmoba/issues
+
+## project demo (lab10)
+- https://youtu.be/TH2RTUh0T7s
+
+
