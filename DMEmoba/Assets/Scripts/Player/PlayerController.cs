@@ -23,7 +23,9 @@ public class PlayerController : MonoBehaviour
     [Header("skill1")]
     public Image imgSkill_1;
     public Image greySkill_1;
-    public float cooldown = 5f;
+    public float cooldown = 12f;
+    public float duration = 5f;
+    public float speedAddAmount = 10f;
     bool isCooldown = false;
     public TMP_Text cooldownText;
 
@@ -94,12 +96,13 @@ public class PlayerController : MonoBehaviour
             imgSkill_1.fillAmount = 0;
             greySkill_1.gameObject.SetActive(true);
             cooldownText.gameObject.SetActive(true);
+            StartCoroutine("buffSpeed");
         }
 
         if(isCooldown)
         {
             imgSkill_1.fillAmount += 1 / cooldown * Time.deltaTime;
-            cooldownText.text = ((1 - imgSkill_1.fillAmount)*5).ToString("n1");
+            cooldownText.text = ((1 - imgSkill_1.fillAmount)*cooldown).ToString("n1");
         }
 
         if (imgSkill_1.fillAmount >= 1)
@@ -109,6 +112,13 @@ public class PlayerController : MonoBehaviour
             greySkill_1.gameObject.SetActive(false);
             cooldownText.gameObject.SetActive(false);
         }
+    }
+
+    IEnumerator buffSpeed()
+    {
+        playerSpeed += speedAddAmount;
+        yield return new WaitForSeconds(duration);
+        playerSpeed -= speedAddAmount;
     }
 
 
