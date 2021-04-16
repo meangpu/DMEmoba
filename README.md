@@ -60,7 +60,7 @@ This game have made up with Unity game engine and C# language for making game sc
 
 * [Unity](https://unity.com/)
 * [Colyseus](https://www.colyseus.io/)
-* [AWS](https://aws.amazon.com/m)
+* [AWS](https://aws.amazon.com/)
 * [Firebase](https://firebase.google.com)
 
 
