@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/PlayerMovement/main_controller.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Player/main_controller.inputactions'
 
 using System;
 using System.Collections;
@@ -30,6 +30,30 @@ public class @Main_controller : IInputActionCollection, IDisposable
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""5e6b76ed-f057-47d3-9459-3e5c5a22df80"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""skill1"",
+                    ""type"": ""Button"",
+                    ""id"": ""e5960b97-72a0-4d9d-a070-6625145c6a56"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""skill2"",
+                    ""type"": ""Button"",
+                    ""id"": ""d3544e90-e257-4c84-af31-ab8e875f3742"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""skill3"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb6acc64-140d-4bd9-8700-aa9563231c04"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -112,6 +136,50 @@ public class @Main_controller : IInputActionCollection, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""01014f8d-d5a1-4776-a73f-bfbf610089df"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""skill1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""81bed559-5430-4adf-94f2-a2d4ecaf257e"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""skill2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b213cf9f-f292-4421-a252-5575b641f031"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""skill3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e7f23e4b-41ad-426c-bde4-1d44f554310e"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""skill3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -149,6 +217,9 @@ public class @Main_controller : IInputActionCollection, IDisposable
         m_Playermain = asset.FindActionMap("Playermain", throwIfNotFound: true);
         m_Playermain_Move = m_Playermain.FindAction("Move", throwIfNotFound: true);
         m_Playermain_Attack = m_Playermain.FindAction("Attack", throwIfNotFound: true);
+        m_Playermain_skill1 = m_Playermain.FindAction("skill1", throwIfNotFound: true);
+        m_Playermain_skill2 = m_Playermain.FindAction("skill2", throwIfNotFound: true);
+        m_Playermain_skill3 = m_Playermain.FindAction("skill3", throwIfNotFound: true);
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_Move = m_Camera.FindAction("Move", throwIfNotFound: true);
@@ -203,12 +274,18 @@ public class @Main_controller : IInputActionCollection, IDisposable
     private IPlayermainActions m_PlayermainActionsCallbackInterface;
     private readonly InputAction m_Playermain_Move;
     private readonly InputAction m_Playermain_Attack;
+    private readonly InputAction m_Playermain_skill1;
+    private readonly InputAction m_Playermain_skill2;
+    private readonly InputAction m_Playermain_skill3;
     public struct PlayermainActions
     {
         private @Main_controller m_Wrapper;
         public PlayermainActions(@Main_controller wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Playermain_Move;
         public InputAction @Attack => m_Wrapper.m_Playermain_Attack;
+        public InputAction @skill1 => m_Wrapper.m_Playermain_skill1;
+        public InputAction @skill2 => m_Wrapper.m_Playermain_skill2;
+        public InputAction @skill3 => m_Wrapper.m_Playermain_skill3;
         public InputActionMap Get() { return m_Wrapper.m_Playermain; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -224,6 +301,15 @@ public class @Main_controller : IInputActionCollection, IDisposable
                 @Attack.started -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnAttack;
+                @skill1.started -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill1;
+                @skill1.performed -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill1;
+                @skill1.canceled -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill1;
+                @skill2.started -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill2;
+                @skill2.performed -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill2;
+                @skill2.canceled -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill2;
+                @skill3.started -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill3;
+                @skill3.performed -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill3;
+                @skill3.canceled -= m_Wrapper.m_PlayermainActionsCallbackInterface.OnSkill3;
             }
             m_Wrapper.m_PlayermainActionsCallbackInterface = instance;
             if (instance != null)
@@ -234,6 +320,15 @@ public class @Main_controller : IInputActionCollection, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @skill1.started += instance.OnSkill1;
+                @skill1.performed += instance.OnSkill1;
+                @skill1.canceled += instance.OnSkill1;
+                @skill2.started += instance.OnSkill2;
+                @skill2.performed += instance.OnSkill2;
+                @skill2.canceled += instance.OnSkill2;
+                @skill3.started += instance.OnSkill3;
+                @skill3.performed += instance.OnSkill3;
+                @skill3.canceled += instance.OnSkill3;
             }
         }
     }
@@ -275,6 +370,9 @@ public class @Main_controller : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnSkill1(InputAction.CallbackContext context);
+        void OnSkill2(InputAction.CallbackContext context);
+        void OnSkill3(InputAction.CallbackContext context);
     }
     public interface ICameraActions
     {

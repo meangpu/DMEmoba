@@ -1,12 +1,13 @@
  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
 
     private Main_controller playerInput;
-
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -17,6 +18,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float gravityValue = -9.81f;
     public Animator anim = null;
+
+
+    [Header("skill1")]
+    public Image imgSkill_1;
+    public Image greySkill_1;
+    public float cooldown = 5f;
+    bool isCooldown = false;
+    public TMP_Text cooldownText;
+
+  
+    void Start()
+    {
+        imgSkill_1.fillAmount = 1;
+        greySkill_1.gameObject.SetActive(false);
+        cooldownText.gameObject.SetActive(false);
+    }
+
 
     private void Awake() {
         playerInput = new Main_controller();
@@ -63,8 +81,35 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+
+        skill_1();
     }
 
+
+    void skill_1()
+    {
+        if(playerInput.Playermain.skill1.triggered && isCooldown is false)
+        {
+            isCooldown = true;
+            imgSkill_1.fillAmount = 0;
+            greySkill_1.gameObject.SetActive(true);
+            cooldownText.gameObject.SetActive(true);
+        }
+
+        if(isCooldown)
+        {
+            imgSkill_1.fillAmount += 1 / cooldown * Time.deltaTime;
+            cooldownText.text = ((1 - imgSkill_1.fillAmount)*5).ToString("n1");
+        }
+
+        if (imgSkill_1.fillAmount >= 1)
+        {
+            imgSkill_1.fillAmount = 1;
+            isCooldown = false;
+            greySkill_1.gameObject.SetActive(false);
+            cooldownText.gameObject.SetActive(false);
+        }
+    }
 
 
 }
