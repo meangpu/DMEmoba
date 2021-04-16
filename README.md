@@ -60,7 +60,8 @@ This game have made up with Unity game engine and C# language for making game sc
 
 * [Unity](https://unity.com/)
 * [Colyseus](https://www.colyseus.io/)
-* [AWS](https://aws.amazon.com/m)
+* [AWS](https://aws.amazon.com/)
+* [Firebase](https://firebase.google.com)
 
 
 ## what we have done
@@ -70,7 +71,17 @@ This game have made up with Unity game engine and C# language for making game sc
 | Make online system so the game can have more than one player in a scene | :white_check_mark: |
 | Make character controller using joystick                                | :white_check_mark: |
 | Add player animation (idle walk run)                                    | :white_check_mark: |
-| Display health for each player                                           | :white_check_mark: |
+| Display health for each player                                          | :white_check_mark: |
+
+## Lab 10 progress update
+- https://youtu.be/TH2RTUh0T7s (Video Preview)
+  
+| Tasks                                                                   | Status             |
+| ----------------------------------------------------------------------- | ------------------ |
+| Fixing scoreboard                                                       | :white_check_mark: |
+| Update proper main menu ( Login and Register)                           | :white_check_mark: |
+| Display player name in game scene                                       | :white_check_mark: |
+| Adding default data for new user                                        | :white_check_mark: |
 
 ## what we plan to do next
 - [ ] Make the game able to handle more states (Expected in fully MOBA featured)
@@ -92,7 +103,5 @@ This game have made up with Unity game engine and C# language for making game sc
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/meangpu/DMEmoba/issues
 
-## project demo (lab10)
-- https://youtu.be/TH2RTUh0T7s
 
 
