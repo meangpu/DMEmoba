@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
     public float speedAddAmount = 10f;
     bool isCooldown = false;
     public TMP_Text cooldownText;
-    [SerializeField] ParticleSystem skill_1Effect;
+    [SerializeField] ParticleSystem skill_1EffectBurst;
+    [SerializeField] ParticleSystem skill_1EffectLong;
 
   
     void Start()
@@ -117,10 +118,12 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator buffSpeed()
     {
-        skill_1Effect.Play();
+        skill_1EffectBurst.Play();
+        skill_1EffectLong.Play();
         playerSpeed += speedAddAmount;
         yield return new WaitForSeconds(duration);
         playerSpeed -= speedAddAmount;
+        skill_1EffectLong.Stop();
     }
 
 
