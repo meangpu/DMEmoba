@@ -6,14 +6,16 @@ public class attackCheck : MonoBehaviour
 {
  
     bool attackIng = false;
+    NetworkManager network;
 
     void Start()
     {
         this.GetComponent<Collider>().enabled = false;
+        network = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
     }
 
 
-    void OnTriggerEnter(Collider col)
+    async void OnTriggerEnter(Collider col)
     {
         if (col.tag == "enemy")
         {
@@ -22,6 +24,7 @@ public class attackCheck : MonoBehaviour
         if (col.tag == "player")
         {
             col.GetComponent<PlayerHp>().TakeDamage(col.GetComponent<PlayerHp>().damageTake);
+            await network.room.Send("health", new {name = col.name, hp = col.GetComponent<PlayerHp>().currentHealth});
         }
     }
 
