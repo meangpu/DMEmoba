@@ -24,7 +24,7 @@ public class attackCheck : MonoBehaviour
         if (col.tag == "player")
         {
             col.GetComponent<PlayerHp>().TakeDamage(col.GetComponent<PlayerHp>().damageTake);
-            await network.room.Send("health", new {name = col.name, hp = col.GetComponent<PlayerHp>().currentHealth});
+            // await network.room.Send("health", new {name = col.name, hp = col.GetComponent<PlayerHp>().currentHealth});
         }
     }
 
