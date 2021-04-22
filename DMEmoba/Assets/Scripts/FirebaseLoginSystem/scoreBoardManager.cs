@@ -8,8 +8,6 @@ using System.Linq;
 
 public class scoreBoardManager : MonoBehaviour
 {
-
-
     public PlayerName playerName;
     //Firebase variables
     [Header("Firebase")]
