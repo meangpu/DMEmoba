@@ -706,7 +706,7 @@ Transform:
   m_GameObject: {fileID: 2980099299588399041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
+  m_LocalScale: {x: 3.2, y: 3.2, z: 3.2}
   m_Children:
   - {fileID: 2975920623070209927}
   - {fileID: 2977868878317632445}
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e4fb905a74e3543bc91aa2082bc010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 7
+  score: 11
   scorePopUp: {fileID: 1031265942800693269, guid: f0376d4d42f13e442a437f6fd4231fc2, type: 3}
   Firebase: {fileID: 0}
 --- !u!1 &2980107973074295143

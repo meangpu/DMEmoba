@@ -14334,7 +14334,7 @@ MonoBehaviour:
   enemy: {fileID: 2980099299588399041, guid: 3add4ea03cfeff746b3cada019b50a0d, type: 3}
   ScoreMin: 2
   ScoreMax: 20
-  Min: {x: 0, y: 0, z: 0}
+  Min: {x: -15, y: 0, z: -25}
   Max: {x: 15, y: 0, z: 25}
   scaleFactor: 5
   waitTime: 3
