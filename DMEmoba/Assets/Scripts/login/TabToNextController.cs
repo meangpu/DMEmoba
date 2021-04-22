@@ -12,7 +12,7 @@ public class TabToNextController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (GetComponent<TMP_InputField> ().isFocused && Input.GetKeyDown (KeyCode.Tab)) {
+        if (GetComponent<TMP_InputField> ().isFocused && Input.GetKeyDown(KeyCode.Tab)) {
             nextField.ActivateInputField ();
         }
     }
