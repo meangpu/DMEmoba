@@ -30,7 +30,7 @@ public class enemySpawner : MonoBehaviour
         _yAxis = UnityEngine.Random.Range(Min.y, Max.y);
         _zAxis = UnityEngine.Random.Range(Min.z, Max.z);
         _randomPosition = new Vector3(_xAxis, transform.position.y, _zAxis);
-        print(_randomPosition);
+        // print(_randomPosition);
     }
 
     public IEnumerator SpawnEnemy()
@@ -38,7 +38,7 @@ public class enemySpawner : MonoBehaviour
         RandomPos();
         int randomScore = UnityEngine.Random.Range(ScoreMin, ScoreMax);
         enemy.GetComponent<creep>().score = randomScore;
-        print(randomScore);
+        // print(randomScore);
 
         enemy.transform.localScale = new Vector3(1 + (randomScore/scaleFactor), 1 + (randomScore/scaleFactor), 1 + (randomScore/scaleFactor));
 
