@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class attackCheck : MonoBehaviour
 {
-
+ 
     bool attackIng = false;
 
     void Start()
@@ -18,6 +18,10 @@ public class attackCheck : MonoBehaviour
         if (col.tag == "enemy")
         {
             Destroy(col.gameObject);
+        }
+        if (col.tag == "player")
+        {
+            col.GetComponent<PlayerHp>().TakeDamage(col.GetComponent<PlayerHp>().damageTake);
         }
     }
 
