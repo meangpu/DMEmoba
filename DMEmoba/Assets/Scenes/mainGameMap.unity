@@ -8535,12 +8535,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6842958911185281385, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8118645615293611553, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8118645615293611553, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934954077432014351, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
