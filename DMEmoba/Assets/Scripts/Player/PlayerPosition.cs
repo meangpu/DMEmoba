@@ -49,7 +49,7 @@ public class PlayerPosition : MonoBehaviour
         rot.w = _rot.w;
         msg.position = pos;
         msg.rotation = rot;
-        network.room.Send("health", msg);
+        network.room.Send("input", msg);
     }
 
     public void ChangeName(string newName)
