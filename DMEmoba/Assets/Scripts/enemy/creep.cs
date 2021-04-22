@@ -17,6 +17,7 @@ public class creep : MonoBehaviour
 
     void OnDestroy()
     {
+        FindObjectOfType<AudioManager>().Play("enemyDie");
         Firebase.callAddScore(score);
         scorePopUp.transform.GetChild(0).GetComponent<TMP_Text>().text = $"+{score.ToString()}xp" ;
         Instantiate(scorePopUp, transform.position, Quaternion.identity);

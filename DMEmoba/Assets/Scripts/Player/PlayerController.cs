@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
             imgSkill_1.fillAmount = 0;
             greySkill_1.gameObject.SetActive(true);
             cooldownText.gameObject.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("power1");
             StartCoroutine("buffSpeed");
         }
 
