@@ -16,7 +16,7 @@ public class NetworkManager : MonoBehaviour
     public Client client;
     string endPoint = "ws://ivrylobs.xyz:2567";
     public Room<State> room;
-    string roomName  = "arena";
+    string roomName = "arena";
     string status = "";
     public bool connectionState = false;
     public TextMeshProUGUI statusText;
@@ -41,18 +41,21 @@ public class NetworkManager : MonoBehaviour
     {
         status = "Connecting";
         client = new Colyseus.Client(endPoint);
-        try {
+        try
+        {
             room = await client.JoinOrCreate<State>(roomName);
             status = "Connected at " + room.Name + " ID: " + room.SessionId;
             connectionState = true;
 
             userPlayerScript.ChangeName(room.SessionId);
             room.State.players.OnAdd += OnPlayerAdd;
-        } catch (Exception ex) {
+        }
+        catch (Exception ex)
+        {
             status = "Connection failed";
             Debug.Log(ex);
         }
-        
+
     }
 
     void UpdateStatus()
@@ -78,19 +81,23 @@ public class NetworkManager : MonoBehaviour
         var objRef = GameObject.Find(key);
         if (key != room.SessionId)
         {
-            changes.ForEach( (obj) => {
+            objRef.GetComponent<PlayerHp>().TakeDamage(50);
+    
+            changes.ForEach((obj) =>
+            {
                 if (obj.Field == "position")
                 {
                     Vect3 pos = (Vect3)obj.Value;
                     //print("Player " + key + "moved at " + pos.x + ", " + pos.y + ", " + pos.z);
                     objRef.transform.position = Vector3.Lerp(objRef.transform.position, new Vector3(pos.x, pos.y, pos.z), 1);
-                } else if (obj.Field == "rotation")
+                }
+                else if (obj.Field == "rotation")
                 {
                     Quat rot = (Quat)obj.Value;
                     print("Player " + key + "look at " + rot.x + ", " + rot.y + ", " + rot.z + ", " + rot.w);
                     objRef.transform.rotation = new Quaternion(rot.x, rot.y, rot.z, rot.w);
                 }
-                
+
             });
         }
     }
