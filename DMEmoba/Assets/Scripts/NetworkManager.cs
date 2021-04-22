@@ -81,7 +81,6 @@ public class NetworkManager : MonoBehaviour
         var objRef = GameObject.Find(key);
         if (key != room.SessionId)
         {
-            objRef.GetComponent<PlayerHp>().TakeDamage(50);
 
             changes.ForEach((obj) =>
             {
