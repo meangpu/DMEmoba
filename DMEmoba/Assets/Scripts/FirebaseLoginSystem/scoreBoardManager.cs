@@ -140,6 +140,34 @@ public class scoreBoardManager : MonoBehaviour
         }
     }
 
+    public IEnumerator AddXP(int _xp)
+    {
+        var DBTask = DBreference.Child("users").Child(User.UserId).GetValueAsync();
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+        
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+        else
+        {
+            //Data has been retrieved
+            DataSnapshot snapshot = DBTask.Result;
+            int nowXp = int.Parse(snapshot.Child("xp").Value.ToString());
+            int newAddedXP = nowXp + _xp;
+
+            var NewDBtask = DBreference.Child("users").Child(User.UserId).Child("xp").SetValueAsync(newAddedXP);
+            yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+            if (DBTask.Exception != null)
+            {
+                Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+            }
+        }
+    }
+        
+
     [ContextMenu("aaaaaaaaaa")]
     private void showDataaa()
     {

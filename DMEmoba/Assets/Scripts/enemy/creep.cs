@@ -7,11 +7,11 @@ public class creep : MonoBehaviour
 {
     public int score;
     public GameObject scorePopUp;
-    public FirebaseManager Firebase;
+    public scoreBoardManager Firebase;
 
     private void Start() 
     {
-        Firebase = GameObject.Find("Firebase").GetComponent<FirebaseManager>();
+        Firebase = GameObject.Find("Firebase").GetComponent<scoreBoardManager>();
     }
 
 
