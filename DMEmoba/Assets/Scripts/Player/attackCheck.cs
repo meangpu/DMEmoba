@@ -15,7 +15,7 @@ public class attackCheck : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider col)
+    async void OnTriggerEnter(Collider col)
     {
         if (col.tag == "enemy")
         {
@@ -24,8 +24,7 @@ public class attackCheck : MonoBehaviour
         if (col.tag == "player")
         {
             col.GetComponent<PlayerHp>().TakeDamage(col.GetComponent<PlayerHp>().damageTake);
-            Debug.Log(col.name);
-            network.room.Send("health", new {name = col.name, hp = col.GetComponent<PlayerHp>().currentHealth});
+            await network.room.Send("health", new {name = col.name, hp = col.GetComponent<PlayerHp>().currentHealth});
         }
     }
 

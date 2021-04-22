@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerHp : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    public int damageTake = 5;
+    public int maxHealth = 10;
+    public int damageTake = 1;
     public int currentHealth;
     public HPBar healthBar;
 
@@ -22,6 +22,7 @@ public class PlayerHp : MonoBehaviour
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
+            Debug.Log("takeDamage");
         }
         else
         {
@@ -31,6 +32,12 @@ public class PlayerHp : MonoBehaviour
             // Destroy(gameObject);
         }
 
+    }
+
+    [ContextMenu("aadd")]
+    public void SetHealthDebug()
+    {
+        healthBar.SetHealth(currentHealth);
     }
 
     public void ChangeHealth(int hp)
