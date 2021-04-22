@@ -6,6 +6,7 @@ public class PlayerHp : MonoBehaviour
 {
 
     public int maxHealth = 10;
+    public int damageTake = 5;
     public int currentHealth;
     public HPBar healthBar;
 
