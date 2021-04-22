@@ -101,6 +101,7 @@ public class NetworkManager : MonoBehaviour
         }
         else
         {
+            Debug.LogWarning("Player HP: " + key);
             changes.ForEach((obj) =>
             {
                 if (obj.Field == "hp")
