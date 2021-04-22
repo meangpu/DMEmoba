@@ -22,6 +22,7 @@ public class attackCheck : MonoBehaviour
         if (col.tag == "player")
         {
             col.GetComponent<PlayerHp>().TakeDamage(col.GetComponent<PlayerHp>().damageTake);
+            Debug.Log(col.name);
         }
     }
 
