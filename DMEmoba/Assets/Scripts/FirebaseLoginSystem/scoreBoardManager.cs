@@ -156,9 +156,10 @@ public class scoreBoardManager : MonoBehaviour
             DataSnapshot snapshot = DBTask.Result;
             int nowXp = int.Parse(snapshot.Child("xp").Value.ToString());
             int newAddedXP = nowXp + _xp;
+            Debug.Log(newAddedXP);
 
             var NewDBtask = DBreference.Child("users").Child(User.UserId).Child("xp").SetValueAsync(newAddedXP);
-            yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+            yield return new WaitUntil(predicate: () => NewDBtask.IsCompleted);
 
             if (DBTask.Exception != null)
             {
@@ -166,7 +167,7 @@ public class scoreBoardManager : MonoBehaviour
             }
         }
     }
-        
+
 
     [ContextMenu("aaaaaaaaaa")]
     private void showDataaa()
