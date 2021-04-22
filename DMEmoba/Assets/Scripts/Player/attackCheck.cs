@@ -17,7 +17,7 @@ public class attackCheck : MonoBehaviour
     {
         if (col.tag == "enemy")
         {
-            Debug.Log(col);
+            // Debug.Log(col);
             Destroy(col.gameObject);
         }
     }
