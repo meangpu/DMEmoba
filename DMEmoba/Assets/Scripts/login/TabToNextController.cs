@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TabToNextController : MonoBehaviour {
 
-    public InputField nextField;
+    public TMP_InputField nextField;
+    
 
-    // Use this for initialization
-    void Start () {
-
-    }
 
     // Update is called once per frame
     void Update () {
-        if (GetComponent<InputField> ().isFocused && Input.GetKeyDown (KeyCode.Tab)) {
+        if (GetComponent<TMP_InputField> ().isFocused && Input.GetKeyDown (KeyCode.Tab)) {
             nextField.ActivateInputField ();
         }
     }

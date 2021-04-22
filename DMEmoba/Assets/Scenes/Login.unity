@@ -8702,6 +8702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 2403173644053376174, guid: c781c170f9263b644b5da85bf903e533, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c781c170f9263b644b5da85bf903e533, type: 3}
 --- !u!224 &1346025639 stripped
