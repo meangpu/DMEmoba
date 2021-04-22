@@ -8,7 +8,7 @@
 using Colyseus.Schema;
 
 public partial class PlayerData : EntityData {
-	[Type(2, "string")]
+	[Type(3, "string")]
 	public string name = default(string);
 }
 

@@ -83,7 +83,7 @@ public class NetworkManager : MonoBehaviour
                 {
                     Vect3 pos = (Vect3)obj.Value;
                     //print("Player " + key + "moved at " + pos.x + ", " + pos.y + ", " + pos.z);
-                    objRef.transform.position = Vector3.Lerp(objRef.transform.position, new Vector3(pos.x, pos.y, pos.z), Time.deltaTime * 5);
+                    objRef.transform.position = Vector3.Lerp(objRef.transform.position, new Vector3(pos.x, pos.y, pos.z), 1);
                 } else if (obj.Field == "rotation")
                 {
                     Quat rot = (Quat)obj.Value;
