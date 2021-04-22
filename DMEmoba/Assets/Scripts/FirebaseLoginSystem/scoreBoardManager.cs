@@ -10,7 +10,7 @@ public class scoreBoardManager : MonoBehaviour
 {
 
 
-    public PlayerName playerName;
+    public PlayerPosition playerName;
     //Firebase variables
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
@@ -28,7 +28,7 @@ public class scoreBoardManager : MonoBehaviour
 
     void Awake()
     {
-        playerName = GameObject.Find("Player").GetComponent<PlayerName>();
+        playerName = GameObject.Find("Player").GetComponent<PlayerPosition>();
         //Check that all of the necessary dependencies for Firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
