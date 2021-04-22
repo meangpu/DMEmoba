@@ -8392,6 +8392,14 @@ PrefabInstance:
       propertyPath: cooldownText
       value: 
       objectReference: {fileID: 1149544378}
+    - target: {fileID: 39498743466429435, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379254179546021146, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5071685139191498895, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
       propertyPath: m_Value
       value: 10
