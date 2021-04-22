@@ -82,7 +82,7 @@ public class NetworkManager : MonoBehaviour
         if (key != room.SessionId)
         {
             objRef.GetComponent<PlayerHp>().TakeDamage(50);
-    
+
             changes.ForEach((obj) =>
             {
                 if (obj.Field == "position")
@@ -98,6 +98,16 @@ public class NetworkManager : MonoBehaviour
                     objRef.transform.rotation = new Quaternion(rot.x, rot.y, rot.z, rot.w);
                 }
 
+            });
+        }
+        else
+        {
+            changes.ForEach((obj) =>
+            {
+                if (obj.Field == "hp")
+                {
+                    Debug.Log(objRef.name + " HP : " + obj.Value);
+                }
             });
         }
     }
