@@ -27,6 +27,8 @@ public class scoreBoardManager : MonoBehaviour
     public TMP_Text username;
     public TMP_Text userid;
 
+    public int userNowXP;
+
     void Awake()
     {
         playerName = GameObject.Find("Player").GetComponent<PlayerPosition>();
@@ -46,12 +48,12 @@ public class scoreBoardManager : MonoBehaviour
         });
 
         playerName.ChangeName(FirebaseManager.User.DisplayName);
+
     }
 
-    public void showUserData()
+    private void Start() 
     {
-        StartCoroutine(LoadUserData());
-        Debug.Log("userData");
+        StartCoroutine(UpdateUserXP());
     }
 
     private void InitializeFirebase()
@@ -103,48 +105,17 @@ public class scoreBoardManager : MonoBehaviour
                 scoreboardElement.GetComponent<ScoreElement>().NewScoreElement(username, kills, deaths, xp);
             }
 
-            //Go to scoareboard screen
-            
-            // UIManager.instance.ScoreboardScreen();
+    
         }
     }
 
-    private IEnumerator LoadUserData()
+
+    private IEnumerator UpdateUserXP()
     {
         //Get the currently logged in user data
-        var DBTask = DBreference.Child("users").Child(User.UserId).GetValueAsync();
+        var DBTask = DBreference.Child("users").Child(FirebaseManager.User.UserId).GetValueAsync();
 
         yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
-
-        if (DBTask.Exception != null)
-        {
-            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
-        }
-        else if (DBTask.Result.Value == null)
-        {
-            //No data exists yet
-            Debug.Log("Player have no data yet");
-            // xpField.text = "0";
-            // killsField.text = "0";
-            // deathsField.text = "0";
-        }
-        else
-        {
-            //Data has been retrieved
-            DataSnapshot snapshot = DBTask.Result;
-            username.text = snapshot.Child("username").Value.ToString();
-            Debug.Log(snapshot);
-            // xpField.text = snapshot.Child("xp").Value.ToString();
-            // killsField.text = snapshot.Child("kills").Value.ToString();
-            // deathsField.text = snapshot.Child("deaths").Value.ToString();
-        }
-    }
-
-    public IEnumerator AddXP(int _xp)
-    {
-        var DBTask = DBreference.Child("users").Child(User.UserId).GetValueAsync();
-        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
-        
 
         if (DBTask.Exception != null)
         {
@@ -155,18 +126,36 @@ public class scoreBoardManager : MonoBehaviour
             //Data has been retrieved
             DataSnapshot snapshot = DBTask.Result;
             int nowXp = int.Parse(snapshot.Child("xp").Value.ToString());
-            int newAddedXP = nowXp + _xp;
-            Debug.Log(newAddedXP);
-
-            var NewDBtask = DBreference.Child("users").Child(User.UserId).Child("xp").SetValueAsync(newAddedXP);
-            yield return new WaitUntil(predicate: () => NewDBtask.IsCompleted);
-
-            if (DBTask.Exception != null)
-            {
-                Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
-            }
+            userNowXP = nowXp;
         }
     }
+
+
+
+    private IEnumerator AddUpdateUserXP(int _xp)
+    {
+        int newAddedXP = userNowXP + _xp;
+        var DBTask = DBreference.Child("users").Child(FirebaseManager.User.UserId).Child("xp").SetValueAsync(newAddedXP);
+
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+    }
+
+
+
+    [ContextMenu("QWERT")]
+    public void callAddScore(int addScore)
+    {
+        StartCoroutine(UpdateUserXP());
+        StartCoroutine(AddUpdateUserXP(addScore));
+    }
+
+
+
 
 
     [ContextMenu("aaaaaaaaaa")]
@@ -193,4 +182,5 @@ public class scoreBoardManager : MonoBehaviour
                 }
             });
     }
+
 }
