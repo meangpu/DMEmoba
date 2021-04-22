@@ -8424,11 +8424,15 @@ PrefabInstance:
       objectReference: {fileID: 1149544378}
     - target: {fileID: 5071685139191498895, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5071685139191498895, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
       propertyPath: m_MaxValue
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071685139191498895, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
+      propertyPath: m_MinValue
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5434844767307256820, guid: 66ff636d9e4c7ea409e223f584772141, type: 3}
       propertyPath: m_RootOrder
