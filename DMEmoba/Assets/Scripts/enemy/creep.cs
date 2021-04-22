@@ -18,9 +18,7 @@ public class creep : MonoBehaviour
     void OnDestroy()
     {
         Firebase.callAddScore(score);
-        // StartCoroutine(Firebase.AddXP(score));
         scorePopUp.transform.GetChild(0).GetComponent<TMP_Text>().text = $"+{score.ToString()}xp" ;
-        // Debug.Log(scorePopUp.transform.GetChild(0).gameObject);
         Instantiate(scorePopUp, transform.position, Quaternion.identity);
     }
 }
