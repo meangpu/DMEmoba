@@ -4,16 +4,13 @@
 [![Issues][issues-shield]][issues-url]
 
 <!-- PROJECT LOGO -->
-<br />
-<h2 align="center">Updated after Final Presentation</h2>
+<br/>
+<h3 align="center">Updated adter Final Presentation</h3>
 <p align="center">
   <a href="http://dmemoba.ivrylobs.xyz/">
     <img src="https://gaming4.cash/wp-content/uploads/2018/08/he-Rise%E2%80%A6-and-Fall-Of-MOBAs-1200x675.png" alt="Logo" height="200">
   </a>
-  
-  
-
-  <h3 align="center">DME MOBA</h3>
+  <h2 align="center">DME MOBA</h2>
   <p align="center">
     An awesome MOBA game made by DME guys
     <br />
