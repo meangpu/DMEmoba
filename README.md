@@ -11,6 +11,7 @@
   </a>
 
   <h3 align="center">DME MOBA</h3>
+  <h2 align="center">Updated after Final Presentation</h3>
 
   <p align="center">
     An awesome MOBA game made by DME guys
