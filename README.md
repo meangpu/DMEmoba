@@ -82,13 +82,6 @@ This game have made up with Unity game engine and C# language for making game sc
 | Display player name in game scene                                       | :white_check_mark: |
 | Adding default data for new user                                        | :white_check_mark: |
 
-## what we plan to do next
-- [ ] Make the game able to handle more states (Expected in fully MOBA featured)
-- [ ] Make the game have capability to take the damage of attack interaction for both allies and enemies
-- [ ] Add more skills and abilities to the players called Champion or Heros
-- [ ] Add the shop for upgrade the status and ability of the players
-- [ ] Make the game able to do auto-attack for players which most MOBA game should have
-- [ ] Improve the game to have more smooth gameplay and lower latancy between clients and server
 
 ## what we have done in Final presentation
 - :white_check_mark: Make the game have capability to take the damage of attack interaction for both allies and enemies
@@ -98,7 +91,6 @@ This game have made up with Unity game engine and C# language for making game sc
 ## Future plan
 - Add the shop for upgrade the status and ability of the players
 - Make the game able to do auto-attack for players which most MOBA game should have
-- Make the game able to handle more states (Expected in fully MOBA featured)
 - Make the game able to handle more states (Expected in fully MOBA featured)
 
 <!-- MARKDOWN LINKS & IMAGES -->
