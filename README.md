@@ -95,18 +95,18 @@ This game have made up with Unity game engine and C# language for making game sc
 
 ## Please update your README file in your repository for this information
 
-1. Member contribution: Who do what and for how long
+1. Member contribution: Who do what and for how long 
 - Nattapong Tangsatheanrapap <613040128-7> :joystick: | :computer: (work on game mechanics and scripts) 
 - Roongpetch Kunthakuldusadee <613040651-2> :electric_plug: | :computer: (work on Backend server and Unity Frontend API) 
 - Ploypailin Pitisuwannarat <613040154-6> :art: | :globe_with_meridians: (work on level/character/UI design) 
 
 2. The best features of the game: the features that make the game fun or good 
 - make joystick smooth and usable 
-- have sound that can customize volumn separately music/sound effect
+- have sound that can customize volumn separately music/sound effect 
 
-3. The features that you would like to improve
-- make online system more stable and harder to cheat
-- make more character
+3. The features that you would like to improve 
+- make online system more stable and harder to cheat 
+- make more character 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
