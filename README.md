@@ -93,6 +93,7 @@ This game have made up with Unity game engine and C# language for making game sc
 - Make the game able to do auto-attack for players which most MOBA game should have
 - Make the game able to handle more states (Expected in fully MOBA featured)
 
+## Please update your README file in your repository for this information
 
 1. Member contribution: Who do what and for how long
 - Nattapong Tangsatheanrapap <613040128-7> :joystick: | :computer: (work on game mechanics and scripts) 
